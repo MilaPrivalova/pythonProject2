@@ -22,14 +22,29 @@
 #2.	Напишите программу, которая найдёт произведение пар чисел списка.
 #Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 
-list_numbers = [2, 3, 4, 5, 6]
-list_multiplication = []
-last_position = len(list_numbers) - 1
+#list_numbers = [2, 3, 4, 5, 6]
+#list_multiplication = []
+#last_position = len(list_numbers) - 1
 
-for index in range(len(list_numbers)):
+#for index in range(len(list_numbers)):
 
-    if index <= last_position:
-        list_multiplication.append(list_numbers[index] * list_numbers[last_position])
-        last_position -= 1
+#    if index <= last_position:
+#        list_multiplication.append(list_numbers[index] * list_numbers[last_position])
+#       last_position -= 1
+#
+# print (list_multiplication)
 
-print (list_multiplication)
+# 3.	Задайте список из вещественных чисел. Напишите программу,
+# которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+
+lst_numbers = [1.1, 1.2, 3.1, 5, 10.01]
+min_item, max_item = 0, 0
+
+for item in lst_numbers:
+
+    if item % 1 > max_item:
+        max_item = item % 1
+    else:
+        min_item = item % 1
+
+print (round(max_item - min_item, 2))
